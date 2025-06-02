@@ -1,3 +1,20 @@
+# =========================================================================
+#
+#  Copyright NumFOCUS
+#
+#  Licensed under the Apache License, Version 2.0 (the "License");
+#  you may not use this file except in compliance with the License.
+#  You may obtain a copy of the License at
+#
+#         http://www.apache.org/licenses/LICENSE-2.0.txt
+#
+#  Unless required by applicable law or agreed to in writing, software
+#  distributed under the License is distributed on an "AS IS" BASIS,
+#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+#  See the License for the specific language governing permissions and
+#  limitations under the License.
+#
+# =========================================================================
 import SimpleITK as sitk
 import matplotlib.pyplot as plt
 
@@ -35,12 +52,11 @@ def myshow(img, title=None, margin=0.05, dpi=80, cmap="gray"):
         ysize = nda.shape[0]
         xsize = nda.shape[1]
 
-    # Make a figure big enough to accomodate an axis of xpixels by ypixels
+    # Make a figure big enough to accommodate an axis of xpixels by ypixels
     # as well as the ticklabels, etc...
     figsize = (1 + margin) * ysize / dpi, (1 + margin) * xsize / dpi
 
     def callback(z=None):
-
         extent = (0, xsize * spacing[1], ysize * spacing[0], 0)
 
         fig = plt.figure(figsize=figsize, dpi=dpi)

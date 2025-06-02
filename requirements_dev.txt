@@ -1,6 +1,7 @@
+black[jupyter]
 pytest
 markdown
 lxml
 pyenchant
-ipython
+ipython<=8.12
 -rPython/requirements.txt
